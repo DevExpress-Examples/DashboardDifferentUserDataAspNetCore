@@ -1,0 +1,74 @@
+@{
+    ViewBag.Title = "Sign in";
+}
+
+@model AspNetCore31Dashboard.LoginData
+
+@using DevExpress.DashboardWeb
+
+<style type="text/css">
+    .roleTable td, .roleTable th {
+        border: 1px solid black;
+        padding: 5px;
+    }
+</style>
+
+<h1>DashboardDifferentUserData Example</h1>
+<p>Select a user or leave the combo box empty to view the dashboards unauthorized:</p>
+
+@using (Html.BeginForm()) {
+    @(Html.DevExtreme().SelectBoxFor(m => m.UserName)
+        .Placeholder("Select User")
+        .ShowClearButton(true)
+        .Items(items => {
+            items.Add().Text("Admin");
+            items.Add().Text("User");
+        })
+        .ValueExpr("text")
+        .DisplayExpr("text")
+    )
+    <br />
+    @(Html.DevExtreme().Button()
+        .ID("btnSubmit")
+        .Text("Sign in")
+        .UseSubmitBehavior(true)
+    )
+}
+
+<hr />
+<table class="roleTable">
+    <thead>
+        <tr>
+            <th>Role</th>
+            <th>Sql</th>
+            <th>Json</th>
+            <th>Excel</th>
+            <th>Object</th>
+            <th>OLAP</th>
+            <th>Extract</th>
+            <th>Entity Framework</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Admin</td>
+            <td>Categories</td>
+            <td>Customers</td>
+            <td>Bikes</td>
+            <td>Sales</td>
+            <td>Customers</td>
+            <td>Sales</td>
+            <td>Categories</td>
+        </tr>
+        <tr>
+            <td>User</td>
+            <td>Categories from different source with optional filter</td>
+            <td>Customers from different source with optional filter</td>
+            <td>Bikes from different source</td>
+            <td>Sales from different source</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Categories from different source</td>
+        </tr>
+    </tbody>
+</table>

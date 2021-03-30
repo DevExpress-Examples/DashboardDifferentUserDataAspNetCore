@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Extract" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="extractSales" Name="Extract Data Source" ConnectionName="extractSalesPerson">
+      <Parameters />
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="extractSales">
+      <DataItems>
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="None" DefaultId="DataItem0" />
+        <Dimension DataMember="Sales Person" DefaultId="DataItem1" />
+        <Measure DataMember="Quantity" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem3" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
