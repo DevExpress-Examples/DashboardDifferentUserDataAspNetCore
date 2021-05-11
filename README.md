@@ -9,7 +9,7 @@
 
 This example shows how to configure the Dashboard control so that it loads data in the multi-user environment. 
 
-You can identify a user in the current session and handle the following events to select the underlying datasource:
+You can identify a user in the current session and handle the following events to select the underlying data source:
 
 * [DashboardConfigurator.ConfigureDataConnection](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.ConfigureDataConnection)
 * [DashboardConfigurator.DataLoading](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.DataLoading)
