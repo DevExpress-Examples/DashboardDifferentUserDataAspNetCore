@@ -26,6 +26,7 @@
     @Html.ActionLink("Sign out", "Index")
 
     @(Html.DevExpress().Dashboard("Dashboard")
+        .ControllerName("DefaultDashboard")
         .OnBeforeRender("onBeforeRender")
         .WorkingMode(WorkingMode.Viewer)
         .Extensions(ext => ext.DataSourceWizard(dsw => dsw.AllowCreateNewJsonConnection(true)))

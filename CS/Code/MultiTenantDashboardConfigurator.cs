@@ -74,11 +74,11 @@ namespace AspNetCore31Dashboard {
                     var jsonSource = new UriJsonSource(remoteUri);
                     if (userName == "User") {
                         jsonSource.QueryParameters.AddRange(new[] {
-                    // "CountryPattern" is a dashboard parameter whose value is used for the "CountryStartsWith" query parameter
-                    new QueryParameter("CountryStartsWith", typeof(Expression), new Expression("Parameters.CountryPattern"))
-                });
+                            // "CountryPattern" is a dashboard parameter whose value is used for the "CountryStartsWith" query parameter
+                            new QueryParameter("CountryStartsWith", typeof(Expression), new Expression("Parameters.CountryPattern"))
+                        });
                     }
-                      ((JsonSourceConnectionParameters)e.ConnectionParameters).JsonSource = jsonSource;
+                    ((JsonSourceConnectionParameters)e.ConnectionParameters).JsonSource = jsonSource;
                 }
             } else if (e.ConnectionName == "excelSales") {
                 var excelConnectionParameters = e.ConnectionParameters as ExcelDataSourceConnectionParameters;
