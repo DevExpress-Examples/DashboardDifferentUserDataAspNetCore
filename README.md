@@ -4,12 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-<!-- default file list --> 
-*Files to look at*: 
-* [Startup.cs](./CS/Startup.cs)
-* [MultiTenantDashboardConfigurator.cs](./CS/Code/MultiTenantDashboardConfigurator.cs)
-<!-- default file list end -->
-
 # Dashboard for ASP.NET Core - How to load different data based on the current user
 
 This example shows how to configure the Dashboard control so that it loads data in the multi-user environment. 
@@ -20,6 +14,12 @@ You can identify a user in the current session and handle the following events t
 * [DashboardConfigurator.DataLoading](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.DataLoading)
 * [DashboardConfigurator.CustomFilterExpression](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomFilterExpression)
 * [DashboardConfigurator.CustomParameters](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomParameters)
+
+<!-- default file list --> 
+## Files to look at 
+* [Startup.cs](./CS/Startup.cs)
+* [MultiTenantDashboardConfigurator.cs](./CS/Code/MultiTenantDashboardConfigurator.cs)
+<!-- default file list end -->
 
 ## Example Structure
 
