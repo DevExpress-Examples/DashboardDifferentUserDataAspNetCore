@@ -27,10 +27,11 @@ You can limit access to data depending on the current user's ID. This ID is stor
 
 When the application starts, you see the [Index](./CS/Views/Home/Index.cshtml) view with a ComboBox in which you can select a user. When you click the **Sign in** button, the ID of the selected user is passed to the `CurrentUser` session variable and you are redirected to the [Dashboard](./CS/Views/Home/Dashboard.cshtml) view. In this view, the Web Dashboard control displays the lists of dashboards and every dashboard loads data available to the selected user. Below is a table that illustrates the user IDs and their associated datasources in this example:
 
-| Role  | Sql | Json | Excel | Object | OLAP | Extract | Entity Framework |
+| Role  | Sql | Json | Excel | Object |  Extract | Entity Framework |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Admin | Categories | Customers | Bikes | Sales | Customers | Sales | Categories |
-| User | Categories from different source with optional filter | Customers from different source with optional filter | Bikes from different source | Sales from different source | - | - | Categories from different source |
+| Admin | Categories | Customers | Bikes | Sales | Sales | Categories |
+| User | Categories from different source with optional filter | Customers from different source with optional filter | Bikes from different source | Sales from different source | - | Categories from different source |
+| Guest | - | - | - | - | - | - | 
 
 ## Documentation
 

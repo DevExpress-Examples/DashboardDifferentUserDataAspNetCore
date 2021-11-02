@@ -14,26 +14,16 @@
 </style>
 
 <h1>DashboardDifferentUserData Example</h1>
-<p>Select a user or leave the combo box empty to view the dashboards unauthorized:</p>
+<p>Select a user to view the available dashboards:</p>
 
-@using (Html.BeginForm()) {
-    @(Html.DevExtreme().SelectBoxFor(m => m.UserName)
-        .Placeholder("Select User")
-        .ShowClearButton(true)
-        .Items(items => {
-            items.Add().Text("Admin");
-            items.Add().Text("User");
-        })
-        .ValueExpr("text")
-        .DisplayExpr("text")
-    )
-    <br />
-    @(Html.DevExtreme().Button()
-        .ID("btnSubmit")
-        .Text("Sign in")
-        .UseSubmitBehavior(true)
-    )
-}
+<form method="post">
+    <select name="UserName">
+        <option value="">Guest</option>
+        <option value="User">User</option>
+        <option value="Admin">Admin</option>
+    </select>
+<input type="submit" value="Sign in" />
+</form>
 
 <hr />
 <table class="roleTable">
@@ -44,7 +34,6 @@
             <th>Json</th>
             <th>Excel</th>
             <th>Object</th>
-            <th>OLAP</th>
             <th>Extract</th>
             <th>Entity Framework</th>
         </tr>
@@ -56,7 +45,6 @@
             <td>Customers</td>
             <td>Bikes</td>
             <td>Sales</td>
-            <td>Customers</td>
             <td>Sales</td>
             <td>Categories</td>
         </tr>
@@ -66,7 +54,6 @@
             <td>Customers from different source with optional filter</td>
             <td>Bikes from different source</td>
             <td>Sales from different source</td>
-            <td>-</td>
             <td>-</td>
             <td>Categories from different source</td>
         </tr>

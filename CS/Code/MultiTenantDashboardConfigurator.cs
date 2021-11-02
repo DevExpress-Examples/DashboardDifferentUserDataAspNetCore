@@ -77,8 +77,12 @@ namespace AspNetCore31Dashboard {
                             // "CountryPattern" is a dashboard parameter whose value is used for the "CountryStartsWith" query parameter
                             new QueryParameter("CountryStartsWith", typeof(Expression), new Expression("Parameters.CountryPattern"))
                         });
+                    } else if (userName != "Admin") {
+                        throw new ApplicationException("You are not authorized to access JSON data.");
                     }
-                    ((JsonSourceConnectionParameters)e.ConnectionParameters).JsonSource = jsonSource;
+                    ((JsonSourceConnectionParameters)e.ConnectionParameters).JsonSource = jsonSource;                                        
+                    
+
                 }
             } else if (e.ConnectionName == "excelSales") {
                 var excelConnectionParameters = e.ConnectionParameters as ExcelDataSourceConnectionParameters;
