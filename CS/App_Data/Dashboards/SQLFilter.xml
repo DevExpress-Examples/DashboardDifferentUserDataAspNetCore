@@ -5,6 +5,7 @@
     <SqlDataSource Name="SQL Data Source" ComponentName="sqlCategories">
       <Connection Name="sqlCategories" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="Categories">
+        <Parameter Name="CategoryNameStartsWith" Type="DevExpress.DataAccess.Expression">(null)([Parameters.CategoryPattern])</Parameter>
         <Tables>
           <Table Name="Categories" />
         </Tables>
@@ -15,6 +16,9 @@
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
+  <Parameters>
+    <Parameter Name="CategoryPattern" Value="C" />
+  </Parameters>
   <Items>
     <Grid ComponentName="gridDashboardItem1" Name="Grid 1" DataSource="sqlCategories" DataMember="Categories">
       <DataItems>
