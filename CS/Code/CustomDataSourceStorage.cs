@@ -20,6 +20,7 @@ public class CustomDataSourceStorage : IDataSourceStorage {
             .AddTable("Categories")
             .SelectAllColumnsFromTable()
             .Build("Categories");
+        query.Parameters.Add(new QueryParameter("CategoryNameStartsWith", typeof(DevExpress.DataAccess.Expression), new DevExpress.DataAccess.Expression("[Parameters.CategoryPattern]")));
         sqlDataSource.Queries.Add(query);
 
         DashboardJsonDataSource jsonDataSource = new DashboardJsonDataSource(jsonDataSourceId) {
