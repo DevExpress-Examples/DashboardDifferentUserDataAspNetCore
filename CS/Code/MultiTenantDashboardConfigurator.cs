@@ -30,9 +30,8 @@ namespace AspNetCore31Dashboard {
 
         // Configure user-specific data caching
         private void DashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
-            var userName = contextAccessor.HttpContext.Session.GetString("CurrentUser");
-
-            e.Parameters.Add(new Parameter("UserRole", typeof(string), userName));
+            var userId = contextAccessor.HttpContext.Session.GetString("CurrentUser").GetHashCode();
+            e.Parameters.Add(new Parameter("UserId", typeof(string), userId));
         }
 
         // Conditional data loading for ObjectDataSource
