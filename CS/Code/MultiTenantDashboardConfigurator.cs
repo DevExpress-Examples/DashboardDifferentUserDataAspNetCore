@@ -105,8 +105,8 @@ namespace AspNetCore31Dashboard {
 
             if (e.DashboardId == "SQLFilter" && e.QueryName == "Categories") {
                 if (userName == "User") {
-                    e.FilterExpression = CriteriaOperator.Parse("StartsWith([CategoryName], ?CategoryNameStartsWith)");
-                }
+                    e.FilterExpression = CriteriaOperator.Parse("StartsWith([CategoryName], 'C')");
+                }            
             }
         }
 

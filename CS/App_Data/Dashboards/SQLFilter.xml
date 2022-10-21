@@ -5,7 +5,6 @@
     <SqlDataSource Name="SQL Data Source" ComponentName="sqlCategories">
       <Connection Name="sqlCategories" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="Categories">
-        <Parameter Name="CategoryNameStartsWith" Type="DevExpress.DataAccess.Expression">(null)([Parameters.CategoryPattern])</Parameter>
         <Tables>
           <Table Name="Categories" />
         </Tables>
