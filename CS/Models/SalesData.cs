@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class SalesData {
         public string Country { get; set; }
         public int Quantity { get; set; }

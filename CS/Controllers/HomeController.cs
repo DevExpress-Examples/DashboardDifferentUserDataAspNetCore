@@ -1,4 +1,4 @@
-﻿using AspNetCore31Dashboard.Models;
+﻿using AspNetCoreDashboard.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace AspNetCore31Dashboard.Controllers {
+namespace AspNetCoreDashboard.Controllers {
     public class HomeController : Controller {
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _hostingEnvironment;

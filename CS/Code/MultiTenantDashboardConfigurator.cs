@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.FileProviders;
 using System;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class MultiTenantDashboardConfigurator : DashboardConfigurator {
         private readonly IHttpContextAccessor contextAccessor;
         private IFileProvider fileProvider { get; }

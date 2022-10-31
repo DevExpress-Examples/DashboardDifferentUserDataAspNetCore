@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class Customer {
         [JsonProperty("companyName")]
         public string CompanyName { get; set; }
