@@ -15,11 +15,9 @@ You can identify a user in the current session and handle the following events t
 * [DashboardConfigurator.CustomFilterExpression](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomFilterExpression)
 * [DashboardConfigurator.CustomParameters](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomParameters)
 
-<!-- default file list --> 
-## Files to look at 
+## Files to Review 
 * [Startup.cs](./CS/Startup.cs)
 * [MultiTenantDashboardConfigurator.cs](./CS/Code/MultiTenantDashboardConfigurator.cs)
-<!-- default file list end -->
 
 ## Example Structure
 
