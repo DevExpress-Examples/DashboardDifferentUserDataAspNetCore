@@ -1,7 +1,7 @@
 [
   {
     "outputFileName": "wwwroot/css/site.min.css",
-      "inputFiles": [
+    "inputFiles": [
       "node_modules/ace-builds/css/ace.css",
       "node_modules/ace-builds/css/theme/dreamweaver.css",
       "node_modules/ace-builds/css/theme/ambiance.css",
