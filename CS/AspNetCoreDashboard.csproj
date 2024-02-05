@@ -3,7 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="22.2.2" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="23.1.*-*" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
   </ItemGroup>
@@ -37,4 +37,3 @@
     <Exec WorkingDirectory="." Command="npm install" />
   </Target>
 </Project>
-

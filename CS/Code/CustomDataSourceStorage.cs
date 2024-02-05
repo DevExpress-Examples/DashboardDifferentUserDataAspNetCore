@@ -1,4 +1,4 @@
-﻿using DevExpress.DashboardCommon;
+using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
 using DevExpress.DataAccess.Excel;
 using DevExpress.DataAccess.Sql;

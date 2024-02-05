@@ -1,4 +1,4 @@
-﻿using AspNetCoreDashboard.Models;
+using AspNetCoreDashboard.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
