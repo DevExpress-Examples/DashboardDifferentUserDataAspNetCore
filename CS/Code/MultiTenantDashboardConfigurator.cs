@@ -22,16 +22,16 @@ namespace AspNetCoreDashboard {
             SetDashboardStorage(new DashboardFileStorage(fileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
             SetDataSourceStorage(new CustomDataSourceStorage());
 
-            CustomParameters += DashboardConfigurator_CustomParameters;
             DataLoading += DashboardConfigurator_DataLoading;
             CustomFilterExpression += DashboardConfigurator_CustomFilterExpression;
             ConfigureDataConnection += DashboardConfigurator_ConfigureDataConnection;
+            DataSourceCacheKeyCreated += MultiTenantDashboardConfigurator_DataSourceCacheKeyCreated;
         }
 
         // Configure user-specific data caching
-        private void DashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
+        private void MultiTenantDashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
             var userId = contextAccessor.HttpContext.Session.GetString("CurrentUser").GetHashCode();
-            e.Parameters.Add(new Parameter("UserId", typeof(string), userId));
+            e.Key.CustomData.Add("UserId", userId.ToString());
         }
 
         // Conditional data loading for ObjectDataSource
