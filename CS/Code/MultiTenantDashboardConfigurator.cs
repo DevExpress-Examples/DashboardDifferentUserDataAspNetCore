@@ -25,11 +25,11 @@ namespace AspNetCoreDashboard {
             DataLoading += DashboardConfigurator_DataLoading;
             CustomFilterExpression += DashboardConfigurator_CustomFilterExpression;
             ConfigureDataConnection += DashboardConfigurator_ConfigureDataConnection;
-            DataSourceCacheKeyCreated += MultiTenantDashboardConfigurator_DataSourceCacheKeyCreated;
+            DataSourceCacheKeyCreated += DashboardConfigurator_DataSourceCacheKeyCreated;
         }
 
         // Configure user-specific data caching
-        private void MultiTenantDashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
+        private void DashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
             var userId = contextAccessor.HttpContext.Session.GetString("CurrentUser").GetHashCode();
             e.Key.CustomData.Add("UserId", userId.ToString());
         }
